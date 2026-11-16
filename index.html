@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICPAS Learning Hub | Candidate Study Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Urgent Announcement Banner -->
+  <div class="alert-bar">
+    <span>📢 Upcoming Exam Notice:</span> CAF & CPA Mock Revision Sessions begin this Saturday at 9:00 AM.
+  </div>
+
+  <!-- Main Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="brand">
+        <div class="logo-badge">ICPAS</div>
+        <div>
+          <h1>ICPAS Learning Hub</h1>
+          <p>Institute of Certified Public Accountants of Somaliland</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#materials">Study Materials</a>
+        <a href="#timetable">Timetable</a>
+        <a href="#support">Candidate FAQ</a>
+        <a href="https://icpasorg.com" target="_blank" class="btn-login">Student Portal</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="pill-badge">24/7 Candidate Resource Center</span>
+      <h2>Everything You Need to Pass Your Exams</h2>
+      <p>Access official lecture notes, past exam papers, revision guides, and quick practice quizzes for CATT, CAF, and CPA candidates.</p>
+      
+      <!-- Search Bar -->
+      <div class="search-box">
+        <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Search subjects (e.g., Financial Accounting, Taxation, Audit)...">
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Study Materials Section -->
+  <main class="container" id="materials">
+    
+    <!-- Program Filter Tabs -->
+    <div class="filter-bar">
+      <button class="tab-btn active" onclick="filterProgram('all', this)">All Programs</button>
+      <button class="tab-btn" onclick="filterProgram('CATT', this)">CATT</button>
+      <button class="tab-btn" onclick="filterProgram('CAF', this)">CAF</button>
+      <button class="tab-btn" onclick="filterProgram('CPA', this)">CPA</button>
+    </div>
+
+    <!-- Resource Cards Grid -->
+    <div class="cards-grid" id="cardsGrid">
+
+      <!-- Card 1: CAF -->
+      <div class="card" data-program="CAF">
+        <div class="card-top">
+          <span class="program-tag tag-caf">CAF</span>
+          <span class="new-badge">Updated</span>
+        </div>
+        <h3>Foundations in Financial Accounting (FIFA)</h3>
+        <p>Complete lecture slides, double-entry bookkeeping practice sheets, and IFRS summary notes.</p>
+        <div class="card-actions">
+          <a href="#" onclick="alert('Demo: Downloading FIFA_Lecture_Notes.pdf'); return false;" class="btn-primary">📄 Lecture Notes (PDF)</a>
+          <button onclick="openQuiz()" class="btn-secondary">✍️ 5-Min Quiz</button>
+        </div>
+      </div>
+
+      <!-- Card 2: CAF -->
+      <div class="card" data-program="CAF">
+        <div class="card-top">
+          <span class="program-tag tag-caf">CAF</span>
+          <span class="new-badge">Past Paper</span>
+        </div>
+        <h3>Foundations in Management Accounting (FIMA)</h3>
+        <p>Costing methods, budgeting formulas, and past examination papers with examiner solutions.</p>
+        <div class="card-actions">
+          <a href="#" onclick="alert('Demo: Downloading FIMA_Past_Papers.pdf'); return false;" class="btn-primary">📄 Past Papers</a>
+          <button onclick="openQuiz()" class="btn-secondary">✍️ 5-Min Quiz</button>
+        </div>
+      </div>
+
+      <!-- Card 3: CATT -->
+      <div class="card" data-program="CATT">
+        <div class="card-top">
+          <span class="program-tag tag-catt">CATT</span>
+          <span class="new-badge">Core</span>
+        </div>
+        <h3>Accounting Technician & Bookkeeping</h3>
+        <p>Step-by-step practical accounting guides, payroll exercises, and Ethics module prep.</p>
+        <div class="card-actions">
+          <a href="#" onclick="alert('Demo: Downloading CATT_Study_Pack.pdf'); return false;" class="btn-primary">📄 Study Pack (PDF)</a>
+          <button onclick="openQuiz()" class="btn-secondary">✍️ 5-Min Quiz</button>
+        </div>
+      </div>
+
+      <!-- Card 4: CPA -->
+      <div class="card" data-program="CPA">
+        <div class="card-top">
+          <span class="program-tag tag-cpa">CPA</span>
+          <span class="new-badge">Advanced</span>
+        </div>
+        <h3>Advanced Financial Reporting & Auditing</h3>
+        <p>Consolidated financial statements, audit standards, and case study revision kits.</p>
+        <div class="card-actions">
+          <a href="#" onclick="alert('Demo: Downloading CPA_Revision_Kit.pdf'); return false;" class="btn-primary">📄 Revision Kit</a>
+          <button onclick="openQuiz()" class="btn-secondary">✍️ 5-Min Quiz</button>
+        </div>
+      </div>
+
+      <!-- Card 5: CPA -->
+      <div class="card" data-program="CPA">
+        <div class="card-top">
+          <span class="program-tag tag-cpa">CPA</span>
+        </div>
+        <h3>Taxation & Business Law</h3>
+        <p>Somaliland tax framework summaries, commercial law notes, and mock exam questions.</p>
+        <div class="card-actions">
+          <a href="#" onclick="alert('Demo: Downloading Tax_Law_Notes.pdf'); return false;" class="btn-primary">📄 Lecture Notes (PDF)</a>
+          <button onclick="openQuiz()" class="btn-secondary">✍️ 5-Min Quiz</button>
+        </div>
+      </div>
+
+      <!-- Card 6: CATT -->
+      <div class="card" data-program="CATT">
+        <div class="card-top">
+          <span class="program-tag tag-catt">CATT</span>
+        </div>
+        <h3>Business Communication & IT Skills</h3>
+        <p>Professional writing templates, spreadsheet formulas, and office administration guides.</p>
+        <div class="card-actions">
+          <a href="#" onclick="alert('Demo: Downloading Comm_IT_Guide.pdf'); return false;" class="btn-primary">📄 Study Guide</a>
+          <button onclick="openQuiz()" class="btn-secondary">✍️ 5-Min Quiz</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Timetable Section -->
+    <section class="timetable-section" id="timetable">
+      <h2>Weekly Revision & Tutorial Timetable</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Program</th>
+              <th>Subject</th>
+              <th>Day & Time</th>
+              <th>Mode / Room</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>CAF</strong></td>
+              <td>Financial Accounting (FIFA)</td>
+              <td>Saturday | 9:00 AM – 11:30 AM</td>
+              <td>Hall A (In-Person)</td>
+            </tr>
+            <tr>
+              <td><strong>CAF</strong></td>
+              <td>Management Accounting (FIMA)</td>
+              <td>Sunday | 4:00 PM – 6:00 PM</td>
+              <td>Hall B + Zoom Live</td>
+            </tr>
+            <tr>
+              <td><strong>CATT</strong></td>
+              <td>Ethics & Bookkeeping</td>
+              <td>Tuesday | 4:30 PM – 6:30 PM</td>
+              <td>Lab 1 (In-Person)</td>
+            </tr>
+            <tr>
+              <td><strong>CPA</strong></td>
+              <td>Advanced Auditing</td>
+              <td>Thursday | 5:00 PM – 7:30 PM</td>
+              <td>Zoom Live Session</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Support / FAQ Section -->
+    <section class="support-box" id="support">
+      <div>
+        <h3>Need Help Accessing Study Materials?</h3>
+        <p>Contact the ICPAS Learning Unit in Hargeisa for portal login support or exam registration inquiries.</p>
+      </div>
+      <a href="https://icpasorg.com" target="_blank" class="btn-yellow">Contact Learning Unit</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 ICPAS Learning Hub — Institute of Certified Public Accountants of Somaliland. Prototype Demo.</p>
+  </footer>
+
+  <!-- Interactive Practice Quiz Modal -->
+  <div id="quizModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeQuiz()">&times;</span>
+      <span class="program-tag tag-caf">Quick Practice Check</span>
+      <h3>Sample Accounting Question</h3>
+      <p class="quiz-q">Which of the following increases with a Debit entry in double-entry bookkeeping?</p>
+      <div class="quiz-options">
+        <button onclick="checkAnswer(this, true)">A) Assets and Expenses</button>
+        <button onclick="checkAnswer(this, false)">B) Liabilities and Revenue</button>
+        <button onclick="checkAnswer(this, false)">C) Owner's Equity</button>
+      </div>
+      <p id="quizFeedback" class="feedback-text"></p>
+    </div>
+  </div>
+
+  <!-- Simple Interactive Script -->
+  <script>
+    function filterProgram(program, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      document.querySelectorAll('.card').forEach(card => {
+        if (program === 'all' || card.dataset.program === program) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function filterCards() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      document.querySelectorAll('.card').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? 'flex' : 'none';
+      });
+    }
+
+    function openQuiz() {
+      document.getElementById('quizModal').style.display = 'flex'; }
