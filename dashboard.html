@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | ICPAS Learning Hub</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="logo">I</div>
+            <div>
+                <h2>ICPAS</h2>
+                <p>Learning Hub</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="active">▦ Dashboard</a>
+            <a href="index.html#materials">▤ My Qualifications</a>
+            <a href="index.html#timetable">▦ Exam Timetable</a>
+            <a href="index.html#materials">▶ Study Materials</a>
+            <a href="#announcements">♧ Announcements</a>
+            <a href="#progress">◷ My Progress</a>
+            <a href="#support">? Help & Support</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <h4>Upcoming Exam</h4>
+            <p>CAF & CPA Examination</p>
+            <small>Check your exam timetable and prepare early.</small>
+            <a href="index.html#timetable" class="exam-btn">
+                View Timetable
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+            <div>
+                <h1>Student Dashboard</h1>
+                <p>Your learning journey starts here.</p>
+            </div>
+
+            <div class="student-profile">
+                <div class="avatar">S</div>
+                <div>
+                    <strong>Student Name</strong>
+                    <small>CAF Candidate</small>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- WELCOME -->
+        <section class="welcome">
+            <div>
+                <span class="welcome-label">STUDENT LEARNING PORTAL</span>
+                <h2>Welcome back, Student! 👋</h2>
+                <p>Keep learning, keep practicing, and stay on track with your qualification.</p>
+            </div>
+
+            <a href="index.html#materials" class="continue-btn">
+                Continue Learning →
+            </a>
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon green">▤</div>
+                <h3>3</h3>
+                <p>Enrolled Courses</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">✓</div>
+                <h3>8</h3>
+                <p>Completed Modules</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">✎</div>
+                <h3>12</h3>
+                <p>Mock Exams Taken</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon blue">🔥</div>
+                <h3>4 Days</h3>
+                <p>Study Streak</p>
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS AND ANNOUNCEMENTS -->
+        <section class="content-grid" id="progress">
+
+            <div class="panel progress-panel">
+                <div class="panel-heading">
+                    <h3>Qualification Progress</h3>
+                    <span class="status">CAF</span>
+                </div>
+
+                <p class="muted">Your overall learning progress</p>
+
+                <div class="progress-number">65%</div>
+
+                <div class="progress-track">
+                    <div class="progress-fill" style="width:65%"></div>
+                </div>
+
+                <div class="progress-details">
+                    <span>8 Modules Completed</span>
+                    <span>4 Remaining</span>
+                </div>
+
+                <a href="index.html#materials" class="text-link">
+                    View My Courses →
+                </a>
+            </div>
+
+
+            <div class="panel" id="announcements">
+                <div class="panel-heading">
+                    <h3>Latest Announcements</h3>
+                    <span class="notification">New</span>
+                </div>
+
+                <div class="announcement">
+                    <span class="announcement-icon">📢</span>
+                    <div>
+                        <strong>Mock Revision Sessions</strong>
+                        <p>CAF & CPA revision sessions begin this Saturday at 9:00 AM.</p>
+                        <small>Upcoming session</small>
+                    </div>
+                </div>
+
+                <div class="announcement">
+                    <span class="announcement-icon">📚</span>
+                    <div>
+                        <strong>New Study Materials</strong>
+                        <p>Check the Learning Hub for updated lecture notes and past papers.</p>
+                        <small>Study resources</small>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- MY COURSES -->
+        <section class="courses-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>My Courses</h2>
+                    <p class="muted">Continue where you left off.</p>
+                </div>
+
+                <a href="index.html#materials" class="text-link">
+                    View All Courses →
+                </a>
+            </div>
+
+
+            <div class="courses-grid">
+
+                <div class="course-card">
+                    <div class="course-icon">FR1</div>
+
+                    <div class="course-info">
+                        <span>CAF</span>
+                        <h3>Financial Accounting (FIFA)</h3>
+                        <p>Foundations in Financial Accounting</p>
+                    </div>
+
+                    <div class="course-progress">
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:65%"></div>
+                        </div>
+                        <span>65% completed</span>
+                    </div>
+
+                    <a href="index.html#materials" class="resume-btn">
+                        Resume Course
+                    </a>
+                </div>
+
+
+                <div class="course-card">
+                    <div class="course-icon orange-icon">MA1</div>
+
+                    <div class="course-info">
+                        <span>CAF</span>
+                        <h3>Management Accounting (FIMA)</h3>
+                        <p>Foundations in Management Accounting</p>
+                    </div>
+
+                    <div class="course-progress">
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:40%"></div>
+                        </div>
+                        <span>40% completed</span>
+                    </div>
+
+                    <a href="index.html#materials" class="resume-btn">
+                        Resume Course
+                    </a>
+                </div>
+
+
+                <div class="course-card">
+                    <div class="course-icon purple-icon">FR2</div>
+
+                    <div class="course-info">
+                        <span>CATT</span>
+                        <h3>Financial Reporting</h3>
+                        <p>Financial Statements and IFRS Standards</p>
+                    </div>
+
+                    <div class="course-progress">
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width:80%"></div>
+                        </div>
+                        <span>80% completed</span>
+                    </div>
+
+                    <a href="index.html#materials" class="resume-btn">
+                        Resume Course
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK LINKS -->
+        <section class="quick-links" id="support">
+            <h2>Quick Access</h2>
+
+            <div class="quick-grid">
+
+                <a href="index.html#materials">
+                    <span>📚</span>
+                    <strong>Study Materials</strong>
+                    <small>Lecture notes and past papers</small>
+                </a>
+
+                <a href="index.html#timetable">
+                    <span>📅</span>
+                    <strong>Exam Timetable</strong>
+                    <small>Upcoming classes and exams</small>
+                </a>
+
+                <a href="index.html#materials">
+                    <span>✍️</span>
+                    <strong>Practice Quizzes</strong>
+                    <small>Test your knowledge</small>
+                </a>
+
+                <a href="index.html#support">
+                    <span>💬</span>
+                    <strong>Student Support</strong>
+                    <small>Get help from ICPAS</small>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            © 2026 ICPAS Learning Hub. All rights reserved.
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>
